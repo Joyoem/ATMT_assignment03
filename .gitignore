@@ -1,0 +1,30 @@
+# Never publish raw course data or model weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+data/
+toolkit/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pkl
+*.pickle
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.npy
+*.npz
+*.model
+*.vocab
+.env
+.env.*
+*.pem
+id_ed25519*
+# full GPU process logs are cluster-local; only excerpts under evidence/
+logs/
+# editor and OS cache
+.DS_Store
+.ipynb_checkpoints/

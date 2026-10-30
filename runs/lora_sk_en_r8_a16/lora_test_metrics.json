@@ -1,0 +1,11 @@
+{
+  "variant": "lora",
+  "split": "test",
+  "n": 2000,
+  "BLEU": 14.292627564156621,
+  "chrF": 34.43897412517981,
+  "sacrebleu_signature": "BLEU = 14.29 45.7/19.6/10.6/6.2 (BP = 0.918 ratio = 0.921 hyp_len = 24004 ref_len = 26060)",
+  "decoding": "greedy, max_gen=95",
+  "seconds": 202.4975276819896,
+  "sentence_per_second": 9.876663793845829
+}

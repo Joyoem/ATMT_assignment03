@@ -1,0 +1,11 @@
+{
+  "variant": "zero_shot",
+  "split": "test",
+  "n": 2000,
+  "BLEU": 8.063173875850518,
+  "chrF": 29.49025444811879,
+  "sacrebleu_signature": "BLEU = 8.06 32.3/10.8/4.9/2.5 (BP = 1.000 ratio = 1.119 hyp_len = 29166 ref_len = 26060)",
+  "decoding": "greedy, max_gen=95",
+  "seconds": 263.2427593249595,
+  "sentence_per_second": 7.597549900816471
+}

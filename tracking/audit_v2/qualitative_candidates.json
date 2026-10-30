@@ -1,0 +1,162 @@
+[
+  {
+    "test_index": 835,
+    "source_sk": "Je tu. Neviem.",
+    "reference_en": "I don't know.",
+    "zero_shot_en": "is here.",
+    "lora_en": "I don't know.",
+    "zero_shot_sentence_chrf": 1.6339869281045754,
+    "lora_sentence_chrf": 100.0,
+    "sentence_chrf_difference": 98.36601307189542
+  },
+  {
+    "test_index": 1885,
+    "source_sk": "Čo sa deje?",
+    "reference_en": "What's wrong?",
+    "zero_shot_en": "to the deje?",
+    "lora_en": "What's wrong?",
+    "zero_shot_sentence_chrf": 5.74712643678161,
+    "lora_sentence_chrf": 100.0,
+    "sentence_chrf_difference": 94.25287356321839
+  },
+  {
+    "test_index": 546,
+    "source_sk": "Vieš čo?",
+    "reference_en": "You know what?",
+    "zero_shot_en": "Vish Noo?",
+    "lora_en": "You know what?",
+    "zero_shot_sentence_chrf": 5.952380952380952,
+    "lora_sentence_chrf": 100.0,
+    "sentence_chrf_difference": 94.04761904761905
+  },
+  {
+    "test_index": 754,
+    "source_sk": "Vieš čo?",
+    "reference_en": "You know what?",
+    "zero_shot_en": "Vish Noo?",
+    "lora_en": "You know what?",
+    "zero_shot_sentence_chrf": 5.952380952380952,
+    "lora_sentence_chrf": 100.0,
+    "sentence_chrf_difference": 94.04761904761905
+  },
+  {
+    "test_index": 954,
+    "source_sk": "Vieš čo?",
+    "reference_en": "You know what?",
+    "zero_shot_en": "Vish Noo?",
+    "lora_en": "You know what?",
+    "zero_shot_sentence_chrf": 5.952380952380952,
+    "lora_sentence_chrf": 100.0,
+    "sentence_chrf_difference": 94.04761904761905
+  },
+  {
+    "test_index": 1868,
+    "source_sk": "- Čože?",
+    "reference_en": "- What?",
+    "zero_shot_en": "to the Chiop?",
+    "lora_en": "- What?",
+    "zero_shot_sentence_chrf": 7.142857142857142,
+    "lora_sentence_chrf": 100.0,
+    "sentence_chrf_difference": 92.85714285714286
+  },
+  {
+    "test_index": 4,
+    "source_sk": "- Čo?",
+    "reference_en": "- What?",
+    "zero_shot_en": "to Choo?",
+    "lora_en": "- What?",
+    "zero_shot_sentence_chrf": 8.064516129032258,
+    "lora_sentence_chrf": 100.0,
+    "sentence_chrf_difference": 91.93548387096774
+  },
+  {
+    "test_index": 1026,
+    "source_sk": "- Čo?",
+    "reference_en": "- What?",
+    "zero_shot_en": "to Choo?",
+    "lora_en": "- What?",
+    "zero_shot_sentence_chrf": 8.064516129032258,
+    "lora_sentence_chrf": 100.0,
+    "sentence_chrf_difference": 91.93548387096774
+  },
+  {
+    "test_index": 215,
+    "source_sk": "Videokamery",
+    "reference_en": "Videocameras",
+    "zero_shot_en": "card video camera Video",
+    "lora_en": "Video",
+    "zero_shot_sentence_chrf": 74.17005301124442,
+    "lora_sentence_chrf": 33.310548831508605,
+    "sentence_chrf_difference": -40.859504179735815
+  },
+  {
+    "test_index": 1574,
+    "source_sk": "Sérotyp [15]",
+    "reference_en": "Serotype [15]",
+    "zero_shot_en": "to serotype [15]",
+    "lora_en": "Sérotyp [15]",
+    "zero_shot_sentence_chrf": 85.43127977238899,
+    "lora_sentence_chrf": 41.24979672859882,
+    "sentence_chrf_difference": -44.18148304379017
+  },
+  {
+    "test_index": 1986,
+    "source_sk": "Olav...",
+    "reference_en": "Olav...",
+    "zero_shot_en": "to the Olav...",
+    "lora_en": "Oliv...",
+    "zero_shot_sentence_chrf": 80.71507689686021,
+    "lora_sentence_chrf": 36.23015873015873,
+    "sentence_chrf_difference": -44.48491816670148
+  },
+  {
+    "test_index": 288,
+    "source_sk": "Zastavte ho!",
+    "reference_en": "Stop him!",
+    "zero_shot_en": "to stop him!",
+    "lora_en": "Stop it!",
+    "zero_shot_sentence_chrf": 74.06063572173902,
+    "lora_sentence_chrf": 29.396555737914813,
+    "sentence_chrf_difference": -44.66407998382421
+  },
+  {
+    "test_index": 1356,
+    "source_sk": "1937, 1937.",
+    "reference_en": "1937, 1937.",
+    "zero_shot_en": "1937, 1937. 1937.",
+    "lora_en": "1937",
+    "zero_shot_sentence_chrf": 87.89844329132691,
+    "lora_sentence_chrf": 32.879188099541224,
+    "sentence_chrf_difference": -55.01925519178569
+  },
+  {
+    "test_index": 1942,
+    "source_sk": "Prezident Ortiz?",
+    "reference_en": "President ortiz ?",
+    "zero_shot_en": "to the president Ortiz?",
+    "lora_en": "Why?",
+    "zero_shot_sentence_chrf": 59.10986777018342,
+    "lora_sentence_chrf": 1.953125,
+    "sentence_chrf_difference": -57.15674277018342
+  },
+  {
+    "test_index": 426,
+    "source_sk": "- Na'Toth!",
+    "reference_en": "- Na'Toth!",
+    "zero_shot_en": "to Na'Toth! - Na'Toth!",
+    "lora_en": "- On the other side!",
+    "zero_shot_sentence_chrf": 75.96681643740551,
+    "lora_sentence_chrf": 13.548307386254516,
+    "sentence_chrf_difference": -62.418509051151
+  },
+  {
+    "test_index": 1173,
+    "source_sk": "Because I really don't care",
+    "reference_en": "Because I really don't care",
+    "zero_shot_en": "to the Beause I reallly don't caret",
+    "lora_en": "I'm talking to the newsletter.",
+    "zero_shot_sentence_chrf": 77.58430472434812,
+    "lora_sentence_chrf": 10.624472003283566,
+    "sentence_chrf_difference": -66.95983272106454
+  }
+]

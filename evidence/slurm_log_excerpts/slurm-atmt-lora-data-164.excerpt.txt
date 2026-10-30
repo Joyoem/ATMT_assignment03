@@ -1,0 +1,6 @@
+Original: slurm-atmt-lora-data-164.out; total lines: 5; excerpt lines: 5
+[1] train: original=1000000 nonempty=1000000 selected=200000
+[2] dev: original=2000 nonempty=2000 selected=2000
+[3] test: original=2000 nonempty=2000 selected=2000
+[4] Exact sentence-pair overlaps: {'train_dev': 0, 'train_test': 0, 'dev_test': 10}
+[5] PREPARE_OK /home/zhaoyan/projects/atmt_a3/data/opus100_en_sk/manifest.json

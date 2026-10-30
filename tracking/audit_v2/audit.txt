@@ -1,0 +1,78 @@
+ATMT Assignment 3 — Detailed Results and Submission Audit (v2)
+Root: /home/zhaoyan/projects/atmt_a3
+Only reads original run files; writes to tracking/audit_v2. Absence of Slurm queue entries is NOT a completion proof.
+
+[OK] Original teacher checkpoint is present
+
+==== TASK 1: LEARNING RATE WARMUP ====
+[OK] constant: 7 epoch-completion records + final completed summary
+[OK] constant: total examples seen=14,000,000 (expected 14,000,000 for seven full 2M-pair epochs)
+[FAIL] constant: full 10,000-sentence test incomplete/inconsistent (metric n=None, hypotheses=None, refs=None)
+constant: epochs=[1, 2, 3, 4, 5, 6, 7]; final step=226854; train seconds (sum of job-level epoch records)=7414.3; best dev NLL=2.046711633243071; test BLEU=None; chrF=None; inference seconds=None
+[OK] linear: 7 epoch-completion records + final completed summary
+[OK] linear: total examples seen=14,000,000 (expected 14,000,000 for seven full 2M-pair epochs)
+[FAIL] linear: full 10,000-sentence test incomplete/inconsistent (metric n=None, hypotheses=None, refs=None)
+linear: epochs=[1, 2, 3, 4, 5, 6, 7]; final step=226854; train seconds (sum of job-level epoch records)=7435.2; best dev NLL=2.0722428597786045; test BLEU=None; chrF=None; inference seconds=None
+[OK] Task 1 identical initial model weight hash
+[OK] Task 1 same validation sentence indices
+Learning rate @ step 1: constant=3e-05 linear=3e-05
+Learning rate @ step 100: constant=3e-05 linear=5.67567568e-05
+Learning rate @ step 500: constant=3e-05 linear=0.000164864865
+Learning rate @ step 1000: constant=3e-05 linear=0.0003
+[WARN] No matched teacher Czech→English baseline evaluation (results/teacher_test_full.metrics.json). Original teacher translations use different max length / runtime; do not claim strictly matched BLEU/time.
+
+==== TASK 2: SLOVAK→ENGLISH LoRA ====
+[OK] LoRA 5 epochs completed: True; epoch records=[1, 2, 3, 4, 5]
+[OK] LoRA module/parameter audit: modules=18, trainable=73728, total=11905600
+[OK] LoRA configuration records original teacher checkpoint epoch
+[OK] LoRA recorded train_sentences=200000; planned value=200000 (disclose intentional deviations)
+[OK] LoRA recorded valid_sentences=2000; planned value=2000 (disclose intentional deviations)
+[OK] LoRA recorded rank=8; planned value=8 (disclose intentional deviations)
+[OK] LoRA recorded alpha=16; planned value=16 (disclose intentional deviations)
+[OK] LoRA recorded batch=64; planned value=64 (disclose intentional deviations)
+[OK] LoRA recorded seed=42; planned value=42 (disclose intentional deviations)
+[OK] LoRA best checkpoint saved
+[OK] OPUS train: Slovak lines=200000, English lines=200000, manifest selected=200000
+[OK] OPUS train.sk: SHA256 matches manifest
+[OK] OPUS train.en: SHA256 matches manifest
+[OK] OPUS dev: Slovak lines=2000, English lines=2000, manifest selected=2000
+[OK] OPUS dev.sk: SHA256 matches manifest
+[OK] OPUS dev.en: SHA256 matches manifest
+[OK] OPUS test: Slovak lines=2000, English lines=2000, manifest selected=2000
+[OK] OPUS test.sk: SHA256 matches manifest
+[OK] OPUS test.en: SHA256 matches manifest
+[WARN] OPUS exact-pair overlap between splits: {'train_dev': 0, 'train_test': 0, 'dev_test': 10}
+[OK] zero_shot: 2,000 test translations + matching metrics (metrics n=2000, lines=2000)
+[OK] lora: 2,000 test translations + matching metrics (metrics n=2000, lines=2000)
+[OK] LoRA fair decode settings: zero-shot='greedy, max_gen=95'; adapted='greedy, max_gen=95'
+LoRA: total train+validation epoch seconds (sum of epoch records)=836.7; zero-shot BLEU=8.063173875850518; adapted BLEU=14.292627564156621
+LoRA inference time delta (adapted - zero-shot): -60.75 seconds
+LoRA BLEU delta (adapted - zero-shot): +6.229
+
+==== INDEPENDENT BLEU / chrF RECOMPUTATION ====
+[OK] zero_shot recomputed: BLEU=8.063, chrF=29.490 (saved 8.063173875850518, 29.49025444811879)
+[OK] lora recomputed: BLEU=14.293, chrF=34.439 (saved 14.292627564156621, 34.43897412517981)
+LoRA ΔBLEU=+6.229; ΔchrF=+4.949
+Generated 8 largest improvements + 8 largest degradations by sentence chrF; MANUALLY inspect before discussing.
+
+==== SUBMISSION AND REPRODUCIBILITY CHECKLIST ====
+[OK] Task 1 modified training implementation: scripts/train_full7.py
+[OK] Task 1 convergence plots + table: scripts/summarize_full7.py
+[OK] Task 1 decoding/evaluation: scripts/evaluate_checkpoint.py
+[OK] Task 2 source-data preparation: scripts/prepare_opus.py
+[OK] Task 2 LoRA training/evaluation: scripts/lora_engine.py
+[OK] Task 1 Slurm training script: jobs/epoch_full7.sbatch
+[OK] Task 2 Slurm training + evaluation script: jobs/lora_gpu.sbatch
+[OK] Task 1 submission script: submit_full7.sh
+[OK] Task 2 submission script: submit_lora.sh
+[OK] Experiment protocol: tracking/experiment_plan_full7.md
+[WARN] Course toolkit has uncommitted changes; record git diff and commit your own fork before submission
+Toolkit commit: 078dab38e72a4690ec841042ed0762199263ff05
+[MANUAL] PDF must be 2–3 pages INCLUDING figures/tables; include names & OLAT usernames (two members), repository URL
+[MANUAL] PDF filename uses alphabetically ordered OLAT usernames; one group member submits on OLAT by 2026-11-03 23:59
+[MANUAL] Report online references/tutorials actually used, data provenance + preprocessing, parameter changes, GPU/training/inference time, results vs baseline, qualitative analysis and reflection
+[MANUAL] GitHub must contain tested scripts AND improved-model test translations; omit .pt, raw OPUS archives, .venv, private credentials, oversized logs
+[MANUAL] Only one seed for each method: comparisons are exploratory; do not claim statistical significance without repeat seeds
+
+COUNTS: {'OK': 41, 'WARN': 3, 'FAIL': 2, 'MANUAL': 5}
+Interpretation: FAIL=missing/inconsistent evidence, WARN=missing secondary evidence or caveat, MANUAL=human action required.

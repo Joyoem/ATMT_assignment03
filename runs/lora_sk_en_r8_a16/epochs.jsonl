@@ -1,0 +1,5 @@
+{"epoch_completed": 1, "step": 3125, "val_nll": 2.7786160897699834, "val_ppl": 16.096729098556775, "train_elapsed_seconds": 166.81197595701087, "best": true}
+{"epoch_completed": 2, "step": 6250, "val_nll": 2.728396627026964, "val_ppl": 15.308322381661966, "train_elapsed_seconds": 167.4492023990024, "best": true}
+{"epoch_completed": 3, "step": 9375, "val_nll": 2.701830515441692, "val_ppl": 14.906994248185828, "train_elapsed_seconds": 167.45165540499147, "best": true}
+{"epoch_completed": 4, "step": 12500, "val_nll": 2.687349746724112, "val_ppl": 14.692684938885606, "train_elapsed_seconds": 167.18336345395073, "best": true}
+{"epoch_completed": 5, "step": 15625, "val_nll": 2.6733168782288823, "val_ppl": 14.48794433210784, "train_elapsed_seconds": 167.7651064710226, "best": true}

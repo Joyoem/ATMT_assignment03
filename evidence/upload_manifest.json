@@ -1,0 +1,459 @@
+{
+  "created_utc": "2026-10-30T16:58:33.868800+00:00",
+  "source_experiment_root": "/home/zhaoyan/projects/atmt_a3",
+  "source_git_repo": "YinZhengxun/atmt_2025",
+  "copied_files": [
+    {
+      "path": "evidence/opus100_en_sk_manifest.json",
+      "bytes": 1355,
+      "sha256": "6108e8196fc5afeeae21552d645b373effcb09a3a95ca4b0674663d78ec21905",
+      "cluster_relative_source": "data/opus100_en_sk/manifest.json"
+    },
+    {
+      "path": "jobs/epoch_full7.sbatch",
+      "bytes": 852,
+      "sha256": "7bd1e6eb3fba0b5e262e785a683f45901fc0117b68a0a4e54c53dd82e2710851",
+      "cluster_relative_source": "jobs/epoch_full7.sbatch"
+    },
+    {
+      "path": "jobs/eval_full_test_FULL7.sbatch",
+      "bytes": 679,
+      "sha256": "72c2a61ba9b598d92e857513bd4f9fba88627db00faa9755c90a2a1c2f57274e",
+      "cluster_relative_source": "jobs/eval_full_test_FULL7.sbatch"
+    },
+    {
+      "path": "jobs/lora_gpu.sbatch",
+      "bytes": 1054,
+      "sha256": "30ce953a69c92a0ac1945d0e94b55310aab9858eb1831eb2dfb644e6ddca6c16",
+      "cluster_relative_source": "jobs/lora_gpu.sbatch"
+    },
+    {
+      "path": "jobs/lora_prepare.sbatch",
+      "bytes": 320,
+      "sha256": "14ead1690344ffdbb6c2c65b408998e694dadd2e48a906defc09d12d7760d208",
+      "cluster_relative_source": "jobs/lora_prepare.sbatch"
+    },
+    {
+      "path": "jobs/smoke_full7.sbatch",
+      "bytes": 878,
+      "sha256": "f51b8b117b3f34dba4e916fff302ce2616c9a42d0e29ba9035468a476d6a9954",
+      "cluster_relative_source": "jobs/smoke_full7.sbatch"
+    },
+    {
+      "path": "runs/full7_constant_s42/config.json",
+      "bytes": 2463,
+      "sha256": "44e85cb6f236eb3fac22a2f6844129fdbb7aa16aa06920295579e016f161c15b",
+      "cluster_relative_source": "runs/full7_constant_s42/config.json"
+    },
+    {
+      "path": "runs/full7_constant_s42/events.jsonl",
+      "bytes": 13733,
+      "sha256": "94e0371cae119e2595c4387d721d7545389e668036be35b2dd345262b845606d",
+      "cluster_relative_source": "runs/full7_constant_s42/events.jsonl"
+    },
+    {
+      "path": "runs/full7_constant_s42/first_batches.jsonl",
+      "bytes": 4997,
+      "sha256": "971977436dc739ca993f5af641bae3c97aaeb58d6ea868441b863026715f57b7",
+      "cluster_relative_source": "runs/full7_constant_s42/first_batches.jsonl"
+    },
+    {
+      "path": "runs/full7_constant_s42/summary.json",
+      "bytes": 381,
+      "sha256": "d27500e397fad77212c46e617b3124ca58fccf839417c19a5a14ab708b92658d",
+      "cluster_relative_source": "runs/full7_constant_s42/summary.json"
+    },
+    {
+      "path": "runs/full7_constant_s42/train_steps.csv",
+      "bytes": 317092,
+      "sha256": "b72cedc82a0188190c6caa0311a7e32011b0f38690bac1dcee12f7fb17bb2379",
+      "cluster_relative_source": "runs/full7_constant_s42/train_steps.csv"
+    },
+    {
+      "path": "runs/full7_constant_s42/validation_indices.json",
+      "bytes": 3013,
+      "sha256": "30676372242628207e9148916f9260671a76dfe1d0a66d2855824423ada0f9e1",
+      "cluster_relative_source": "runs/full7_constant_s42/validation_indices.json"
+    },
+    {
+      "path": "runs/full7_linear_s42/config.json",
+      "bytes": 2457,
+      "sha256": "b28301bd62b8b181542e508a761de21d196a68eb179bc19b6a9b4e68e673e413",
+      "cluster_relative_source": "runs/full7_linear_s42/config.json"
+    },
+    {
+      "path": "runs/full7_linear_s42/events.jsonl",
+      "bytes": 13745,
+      "sha256": "de636a5d541fd6d4b42e00f0965213395396dcff3da8e1c2609ddc388d19a906",
+      "cluster_relative_source": "runs/full7_linear_s42/events.jsonl"
+    },
+    {
+      "path": "runs/full7_linear_s42/first_batches.jsonl",
+      "bytes": 4997,
+      "sha256": "971977436dc739ca993f5af641bae3c97aaeb58d6ea868441b863026715f57b7",
+      "cluster_relative_source": "runs/full7_linear_s42/first_batches.jsonl"
+    },
+    {
+      "path": "runs/full7_linear_s42/summary.json",
+      "bytes": 381,
+      "sha256": "0beb25107ca424af22da5aa3ef7169dbf47211ad249d14ba682f6a4513f65e30",
+      "cluster_relative_source": "runs/full7_linear_s42/summary.json"
+    },
+    {
+      "path": "runs/full7_linear_s42/train_steps.csv",
+      "bytes": 312512,
+      "sha256": "2af2729310e6d31bad70baa7711282954352625648f115476ba4e1c20d13c8f9",
+      "cluster_relative_source": "runs/full7_linear_s42/train_steps.csv"
+    },
+    {
+      "path": "runs/full7_linear_s42/validation_indices.json",
+      "bytes": 3013,
+      "sha256": "30676372242628207e9148916f9260671a76dfe1d0a66d2855824423ada0f9e1",
+      "cluster_relative_source": "runs/full7_linear_s42/validation_indices.json"
+    },
+    {
+      "path": "runs/lora_sk_en_r8_a16/config.json",
+      "bytes": 2142,
+      "sha256": "1d753da6e8492e39e28d0273f22195d7d03928e5bad1a696c3b4d96fd1e84f14",
+      "cluster_relative_source": "runs/lora_sk_en_r8_a16/config.json"
+    },
+    {
+      "path": "runs/lora_sk_en_r8_a16/epochs.jsonl",
+      "bytes": 786,
+      "sha256": "839bdbac3c2be68f0d738fb79141077ffa2a9292be816569f29bdf07fb64ea4e",
+      "cluster_relative_source": "runs/lora_sk_en_r8_a16/epochs.jsonl"
+    },
+    {
+      "path": "runs/lora_sk_en_r8_a16/lora_test_metrics.json",
+      "bytes": 345,
+      "sha256": "158dd7616784c5cf1cd7105064a804b8cc02b6d78fd5377fc2d3209791eb1ed7",
+      "cluster_relative_source": "runs/lora_sk_en_r8_a16/lora_test_metrics.json"
+    },
+    {
+      "path": "runs/lora_sk_en_r8_a16/lora_test_translations.en",
+      "bytes": 108721,
+      "sha256": "50886ec061bb228bcda78e614ffa2955be42bb0b1a0125f27aca2303dd254c90",
+      "cluster_relative_source": "runs/lora_sk_en_r8_a16/lora_test_translations.en"
+    },
+    {
+      "path": "runs/lora_sk_en_r8_a16/steps.csv",
+      "bytes": 8188,
+      "sha256": "418dc64f806a66b47646580b8ed0ffec5d1278aaa06bdec4e02d7c43a58a0118",
+      "cluster_relative_source": "runs/lora_sk_en_r8_a16/steps.csv"
+    },
+    {
+      "path": "runs/lora_sk_en_r8_a16/zero_shot_test_metrics.json",
+      "bytes": 347,
+      "sha256": "73b6b0e68bb24cc37a77c7a2649a95be5d9bf522e71c11d154b2cb72296e06c8",
+      "cluster_relative_source": "runs/lora_sk_en_r8_a16/zero_shot_test_metrics.json"
+    },
+    {
+      "path": "runs/lora_sk_en_r8_a16/zero_shot_test_translations.en",
+      "bytes": 131026,
+      "sha256": "586109779301735826d2dcd96aac394d8335371f89f289ab3784566528772a90",
+      "cluster_relative_source": "runs/lora_sk_en_r8_a16/zero_shot_test_translations.en"
+    },
+    {
+      "path": "scripts/evaluate_checkpoint.py",
+      "bytes": 3983,
+      "sha256": "dec9262b3752cf1868d7c7dd50e60cf2ea85069c9701d5745611115fff5ce043",
+      "cluster_relative_source": "scripts/evaluate_checkpoint.py"
+    },
+    {
+      "path": "scripts/lora_engine.py",
+      "bytes": 10901,
+      "sha256": "d755a7240667f5a4abd91c7065bacfe49a1940b9befe0ea43b8c5079e3c84095",
+      "cluster_relative_source": "scripts/lora_engine.py"
+    },
+    {
+      "path": "scripts/preflight_lora_cpu.py",
+      "bytes": 5572,
+      "sha256": "9faaee4661640827aac4aa8c2fcee6e8d9b841d9bd6bd941ea296fc1da002845",
+      "cluster_relative_source": "scripts/preflight_lora_cpu.py"
+    },
+    {
+      "path": "scripts/prepare_opus.py",
+      "bytes": 5372,
+      "sha256": "b95e681fecfaaabb3275605fecb5a572404f15a9ff30b1a08a40f502ea8bcc12",
+      "cluster_relative_source": "scripts/prepare_opus.py"
+    },
+    {
+      "path": "scripts/summarize_full7.py",
+      "bytes": 3877,
+      "sha256": "72248b84e12a40cee3673bf7811385f057f6af5b6a7b5dfc08fd35933d926f63",
+      "cluster_relative_source": "scripts/summarize_full7.py"
+    },
+    {
+      "path": "scripts/train_full7.py",
+      "bytes": 23305,
+      "sha256": "f967ea646e079175d4793f7cf352e15970a171639b4df9033dce2daf9a454a9f",
+      "cluster_relative_source": "scripts/train_full7.py"
+    },
+    {
+      "path": "submit_full7.sh",
+      "bytes": 1074,
+      "sha256": "3ae1aa8a55c3af5a960d069f0a3247283ed8d6dfb3c615ed6840f111dbbfaac2",
+      "cluster_relative_source": "submit_full7.sh"
+    },
+    {
+      "path": "submit_lora.sh",
+      "bytes": 1161,
+      "sha256": "2f6a9b670874efa6e085f4058d1c7ae60a121bb90a512e54421f20d0c7761d7d",
+      "cluster_relative_source": "submit_lora.sh"
+    },
+    {
+      "path": "tracking/audit_v2/audit.json",
+      "bytes": 33748,
+      "sha256": "903b6c2b06ac43988c28d02ac2ca824b5c31c7add375acad7957938fe01b9c38",
+      "cluster_relative_source": "tracking/audit_v2/audit.json"
+    },
+    {
+      "path": "tracking/audit_v2/audit.txt",
+      "bytes": 5780,
+      "sha256": "db5c6fe94f768e5474725559fd2dbbdeff9d209e46fdbb187456054b31843003",
+      "cluster_relative_source": "tracking/audit_v2/audit.txt"
+    },
+    {
+      "path": "tracking/audit_v2/comparison.csv",
+      "bytes": 438,
+      "sha256": "9b17f1ea570f212146cc1d68536822a3f9fd030861d9c9dec32e43463791b9f8",
+      "cluster_relative_source": "tracking/audit_v2/comparison.csv"
+    },
+    {
+      "path": "tracking/audit_v2/qualitative_candidates.csv",
+      "bytes": 1848,
+      "sha256": "e50625d59df8a3876e2f79cc7d8ba73e80bbbd5e9e3889de8ea9941bc874af46",
+      "cluster_relative_source": "tracking/audit_v2/qualitative_candidates.csv"
+    },
+    {
+      "path": "tracking/audit_v2/qualitative_candidates.json",
+      "bytes": 4953,
+      "sha256": "b9ce6841f16ac9e37e90c87305ae4e4ac09e9f071d6b8d152c707362e8d19956",
+      "cluster_relative_source": "tracking/audit_v2/qualitative_candidates.json"
+    },
+    {
+      "path": "tracking/experiment_plan_full7.md",
+      "bytes": 4246,
+      "sha256": "1cb876f230aa6d6b17ee396c71e36b8509fc2122b0a395dab73915eb33a7f533",
+      "cluster_relative_source": "tracking/experiment_plan_full7.md"
+    },
+    {
+      "path": "tracking/full7_submitted_jobs.txt",
+      "bytes": 1380,
+      "sha256": "63b1e8c0c23b9ba3dbf9490488b6232f4c11683e575b79153a07ad65823e2e14",
+      "cluster_relative_source": "tracking/full7_submitted_jobs.txt"
+    },
+    {
+      "path": "tracking/lora_cpu_preflight.log",
+      "bytes": 422,
+      "sha256": "2d1a221d1b9e4990315b129b69fb7624c59bf7754c74702b3128f8d1f25c7d3b",
+      "cluster_relative_source": "tracking/lora_cpu_preflight.log"
+    },
+    {
+      "path": "tracking/lora_submission.txt",
+      "bytes": 19,
+      "sha256": "f5591f07a74f9d7d095f89c5ff84b6555f6ba735b2f5f41868bcc922f51b83ad",
+      "cluster_relative_source": "tracking/lora_submission.txt"
+    },
+    {
+      "path": "tracking/prepared_dataset_audit.json",
+      "bytes": 158,
+      "sha256": "c866a41a2e8ac2922d8ffa74c29f7dbce7b7182e87761492bbefa5322e87d999",
+      "cluster_relative_source": "tracking/prepared_dataset_audit.json"
+    },
+    {
+      "path": "tracking/toolkit_commit.txt",
+      "bytes": 41,
+      "sha256": "e669b138d267412c8ca733c3df855aedf4f9503826b679b5bf226061a7947d28",
+      "cluster_relative_source": "tracking/toolkit_commit.txt"
+    }
+  ],
+  "missing_expected_files": [
+    "results/full7_constant_test_full.metrics.json",
+    "results/full7_constant_test_full.translations.txt",
+    "results/full7_linear_test_full.metrics.json",
+    "results/full7_linear_test_full.translations.txt",
+    "results/teacher_test_full.metrics.json",
+    "results/teacher_test_full.translations.txt",
+    "tracking/lora_cpu_preflight_after_data.log",
+    "tracking/summary_full7.csv"
+  ],
+  "slurm_log_summaries": [
+    {
+      "filename": "slurm-atmt-constant-e1-117.out",
+      "bytes": 33954,
+      "sha256": "63b33a50ed0015df51af09e32238757c9ec05c4311dd3dbbf2202e646cddc192",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-constant-e1-117.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-constant-e2-118.out",
+      "bytes": 34032,
+      "sha256": "7186194709dae9ee518f5141d70ee5d686905a7887a573daca33f34784c0a69c",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-constant-e2-118.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-constant-e3-119.out",
+      "bytes": 34034,
+      "sha256": "9ac40f7a16b0e773da1e479898b5641072647a7b5aa1994b07bdeda9d29edeb3",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-constant-e3-119.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-constant-e4-120.out",
+      "bytes": 34335,
+      "sha256": "a8c9122a19cecb04acabcdd284c680960b3788a51e8cef081c262c7b608e8080",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-constant-e4-120.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-constant-e5-121.out",
+      "bytes": 34432,
+      "sha256": "79c40fe873e22636a034a7c0fb3546acd4eabce3af81d82a4e4f143e14d447c1",
+      "lines": 335,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-constant-e5-121.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-constant-e6-122.out",
+      "bytes": 34362,
+      "sha256": "f59b5c0f9ad974d3d56e4842a13b886777de3e007cec41522d782b84d1486ba8",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-constant-e6-122.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-constant-e7-123.out",
+      "bytes": 34353,
+      "sha256": "b430b95891beb3c3539e66d6430f28cf3600375afb7b5996e5001fa3d1da6607",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-constant-e7-123.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-linear-e1-157.out",
+      "bytes": 33375,
+      "sha256": "d203b38b0d849d7664519ddb407e63c2e5c259312f89f28663e7ef3084b7f10d",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-linear-e1-157.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-linear-e2-158.out",
+      "bytes": 33379,
+      "sha256": "f756f73647b79880f5c72e37447efda3e8b5a9da2c022b924ae9d8604b13444b",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-linear-e2-158.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-linear-e3-159.out",
+      "bytes": 33382,
+      "sha256": "7414eaefee9862c20d006c564c0d2b25b3adabe8c8be894a0d1e6ad8feac449f",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-linear-e3-159.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-linear-e4-160.out",
+      "bytes": 33685,
+      "sha256": "31f1a33303761ed207b23fb5e6f471fd8ac03bfe7883d91f41d1aec73fa4e26c",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-linear-e4-160.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-linear-e5-161.out",
+      "bytes": 33782,
+      "sha256": "71374348f8c5ecdcb3bce9bdfd81ef6181ccc340bfacea5f64816e919ad4ec2f",
+      "lines": 335,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-linear-e5-161.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-linear-e6-162.out",
+      "bytes": 33712,
+      "sha256": "4e2cb5392bed51e58aac48d9d41a2c2282563cf5117d8e2de8d3fc5f0a3cadeb",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-linear-e6-162.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-linear-e7-163.out",
+      "bytes": 33702,
+      "sha256": "16af8710fdeb1d53874a02d93a9d3319db344b1481ad601f95939b390220e517",
+      "lines": 334,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-linear-e7-163.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-lora-165.out",
+      "bytes": 652,
+      "sha256": "a50ef4a204dc59d7c3eb8e275224a3af1953401c8cc7e68414eb6cbe2d45de94",
+      "lines": 17,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora-165.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-lora-data-164.out",
+      "bytes": 307,
+      "sha256": "af2cad6ce5476da8e5b894566ceadee6abdbd7983d9910ee5c7b45de89b6eb54",
+      "lines": 5,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora-data-164.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-lora-e1-166.out",
+      "bytes": 1285,
+      "sha256": "bb745e48e9e72b66d6648838c3aacf5d258a95bb272d09cf38e07393e93a9a07",
+      "lines": 32,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora-e1-166.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-lora-e2-167.out",
+      "bytes": 1308,
+      "sha256": "e57e2ccbc1b52579aff8498dfcf9d8655bd28b566873505180dcbb431a5f1ff3",
+      "lines": 33,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora-e2-167.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-lora-e3-168.out",
+      "bytes": 1308,
+      "sha256": "9192795a8d2d78800b327bcf3f252c755718e8416fd360f2c321a3976bc00316",
+      "lines": 33,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora-e3-168.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-lora-e4-169.out",
+      "bytes": 1374,
+      "sha256": "63f061faf02de38f441c672c4fe0b877c0d819f98b0622e1cc01933cd307eb0e",
+      "lines": 34,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora-e4-169.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-lora-e5-170.out",
+      "bytes": 1341,
+      "sha256": "721043256a55cf35aa1b7a0a34015de092bd1eba28eab5ba314ba3e03c08c4c9",
+      "lines": 33,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora-e5-170.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-lora_eval-172.out",
+      "bytes": 1182,
+      "sha256": "028d299c425e1ea02cebc53eda26883772b73d9e58814e6317ef192cd2e277fe",
+      "lines": 33,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora_eval-172.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-smoke-constant-116.out",
+      "bytes": 1271,
+      "sha256": "8bca6ac5c5f847afb7e4bd1f447a1c6d3b520e681f7fa782a629e7dd8256099b",
+      "lines": 12,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-smoke-constant-116.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-smoke-linear-156.out",
+      "bytes": 1257,
+      "sha256": "00cd921d892d72c6c6517b8d3de20fa3c6ded50032c87b83a021b5bbc8241498",
+      "lines": 12,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-smoke-linear-156.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-zero_shot-171.out",
+      "bytes": 1284,
+      "sha256": "a1f7a641ba25e43428aebeb3366e5bfcba795def45dbff6a199f884e5d741bd3",
+      "lines": 33,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-zero_shot-171.excerpt.txt"
+    }
+  ],
+  "note": "Missing files are not proof of completion. See tracking/audit_v2/audit.txt. No raw data/weights uploaded."
+}

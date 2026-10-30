@@ -1,0 +1,7 @@
+PASS offline archive-format fixture
+Model checkpoint: /home/zhaoyan/projects/atmt_a3/data/extracted/cz-en/checkpoints/checkpoint_best.pt
+LoRA modules=18; trainable=73,728; total=11,905,600; share=0.619%; frozen=119
+PASS initial LoRA output equals unmodified baseline
+PASS CPU backward/optimizer update; loss=1.9405; target_tokens=8
+NOTICE prepared OPUS data not present yet: only fixture+model checks ran
+CPU_PREFLIGHT_OK

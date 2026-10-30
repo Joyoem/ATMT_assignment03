@@ -1,0 +1,15 @@
+{
+  "type": "completed",
+  "step": 226854,
+  "completed_epochs": 7,
+  "process_seconds": 1080.2584786539664,
+  "best_valid_nll_per_token": 2.046711633243071,
+  "last_valid_nll_per_token": 2.046711633243071,
+  "examples_seen_total": 14000000,
+  "target_tokens_seen_total": 243911101,
+  "method": "constant",
+  "seed": 42,
+  "lr": 0.0003,
+  "warmup_steps": 1000,
+  "max_epochs": 7
+}

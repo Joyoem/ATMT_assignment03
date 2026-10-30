@@ -1,0 +1,68 @@
+{
+  "mode": "train",
+  "run_dir": "runs/lora_sk_en_r8_a16",
+  "train_limit": 0,
+  "valid_limit": 0,
+  "seed": 42,
+  "rank": 8,
+  "alpha": 16,
+  "lr": 0.0003,
+  "batch": 64,
+  "valid_batch": 32,
+  "max_len": 96,
+  "max_gen": 95,
+  "stop_after_epoch": 5,
+  "resume": true,
+  "log_every": 100,
+  "variant": "lora",
+  "split": "test",
+  "train_sentences": 200000,
+  "valid_sentences": 2000,
+  "teacher_epoch": 6,
+  "teacher_val_loss": 7.379053953554132,
+  "total_parameters": 11905600,
+  "trainable_parameters": 73728,
+  "modules_wrapped": 18,
+  "torch_version": "2.15.0+cu132",
+  "cuda": "13.2",
+  "opus_manifest": {
+    "source_url": "https://object.pouta.csc.fi/OPUS-100/v1.0/opus-100-corpus-en-sk-v1.0.tar.gz",
+    "archive_sha256": "1641ebabc596e1dad84ec1bfccfdc0d8c65837fc8739631eb7826066bb328f05",
+    "archive_size_bytes": 46618395,
+    "seed": 42,
+    "train_size_requested": 200000,
+    "counts": {
+      "train": {
+        "original_pairs": 1000000,
+        "nonempty_pairs": 1000000,
+        "selected_pairs": 200000
+      },
+      "dev": {
+        "original_pairs": 2000,
+        "nonempty_pairs": 2000,
+        "selected_pairs": 2000
+      },
+      "test": {
+        "original_pairs": 2000,
+        "nonempty_pairs": 2000,
+        "selected_pairs": 2000
+      }
+    },
+    "pair_overlap": {
+      "train_dev": 0,
+      "train_test": 0,
+      "dev_test": 10
+    },
+    "split_definition": "official OPUS-100 train/dev/test; shuffled train subset only; discard pairs with either side blank",
+    "files_sha256": {
+      "train.sk": "c3deff5f6e88b1565984c3e782807f4aa695383ded1c4491a337909a31a11bb8",
+      "train.en": "e1c7487281aa060d9f4b123f10137b527e7c38d9541fa2d066d0ce7be1bed922",
+      "dev.sk": "51a62a6d7cee55069718c47f23e186aa9ff5f864ca9184539784bde3e80c2196",
+      "dev.en": "9463d51199bd97c08786bd170f3a47e716ba9050fdfe55bde110c66358b6226f",
+      "test.sk": "7c710482bcbe15a8ee142cd19998bc6ff7c65c746a672a99015196549bf3b039",
+      "test.en": "4c74b43e1256aef6d9d8eb1b6b673ac0adc2312e73a21e77249f611d945b0f0e"
+    }
+  },
+  "toolkit_commit": "078dab38e72a4690ec841042ed0762199263ff05",
+  "gpu": "NVIDIA GeForce RTX 3060"
+}

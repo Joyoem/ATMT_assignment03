@@ -1,0 +1,17 @@
+test_index,source_sk,reference_en,zero_shot_en,lora_en,zero_shot_sentence_chrf,lora_sentence_chrf,sentence_chrf_difference
+835,Je tu. Neviem.,I don't know.,is here.,I don't know.,1.6339869281045754,100.0,98.36601307189542
+1885,Čo sa deje?,What's wrong?,to the deje?,What's wrong?,5.74712643678161,100.0,94.25287356321839
+546,Vieš čo?,You know what?,Vish Noo?,You know what?,5.952380952380952,100.0,94.04761904761905
+754,Vieš čo?,You know what?,Vish Noo?,You know what?,5.952380952380952,100.0,94.04761904761905
+954,Vieš čo?,You know what?,Vish Noo?,You know what?,5.952380952380952,100.0,94.04761904761905
+1868,- Čože?,- What?,to the Chiop?,- What?,7.142857142857142,100.0,92.85714285714286
+4,- Čo?,- What?,to Choo?,- What?,8.064516129032258,100.0,91.93548387096774
+1026,- Čo?,- What?,to Choo?,- What?,8.064516129032258,100.0,91.93548387096774
+215,Videokamery,Videocameras,card video camera Video,Video,74.17005301124442,33.310548831508605,-40.859504179735815
+1574,Sérotyp [15],Serotype [15],to serotype [15],Sérotyp [15],85.43127977238899,41.24979672859882,-44.18148304379017
+1986,Olav...,Olav...,to the Olav...,Oliv...,80.71507689686021,36.23015873015873,-44.48491816670148
+288,Zastavte ho!,Stop him!,to stop him!,Stop it!,74.06063572173902,29.396555737914813,-44.66407998382421
+1356,"1937, 1937.","1937, 1937.","1937, 1937. 1937.",1937,87.89844329132691,32.879188099541224,-55.01925519178569
+1942,Prezident Ortiz?,President ortiz ?,to the president Ortiz?,Why?,59.10986777018342,1.953125,-57.15674277018342
+426,- Na'Toth!,- Na'Toth!,to Na'Toth! - Na'Toth!,- On the other side!,75.96681643740551,13.548307386254516,-62.418509051151
+1173,Because I really don't care,Because I really don't care,to the Beause I reallly don't caret,I'm talking to the newsletter.,77.58430472434812,10.624472003283566,-66.95983272106454

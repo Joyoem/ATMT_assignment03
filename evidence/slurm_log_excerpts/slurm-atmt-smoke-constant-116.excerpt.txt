@@ -1,0 +1,13 @@
+Original: slurm-atmt-smoke-constant-116.out; total lines: 12; excerpt lines: 12
+[1] GPU: NVIDIA GeForce RTX 3060
+[2] RUN method=constant cuda=True max_epochs=7 stop_after_epoch=7 max_steps=100 warmup=20 run_dir=/home/zhaoyan/projects/atmt_a3/runs/smoke_full7_constant_116
+[3] DATA loaded train=2000000 valid=10000 seconds=4.5
+[4] MODEL params=11831872 initial_sha256=0af33cc7536255b1df25bdf61b7fd1656288c5d983e89e6ffae4b9817bf841ab
+[5] STEP=1/100 method=constant lr=3e-05 nll/token=9.1186 sec/step_recent=0.448 tokens/sec_recent=5764
+[6] STEP=20/100 method=constant lr=3e-05 nll/token=8.1338 sec/step_recent=0.030 tokens/sec_recent=31654
+[7] STEP=40/100 method=constant lr=0.0003 nll/token=7.6564 sec/step_recent=0.027 tokens/sec_recent=31332
+[8] STEP=60/100 method=constant lr=0.0003 nll/token=7.5557 sec/step_recent=0.031 tokens/sec_recent=38177
+[9] STEP=80/100 method=constant lr=0.0003 nll/token=6.7547 sec/step_recent=0.031 tokens/sec_recent=43252
+[10] STEP=100/100 method=constant lr=0.0003 nll/token=5.8952 sec/step_recent=0.028 tokens/sec_recent=29635
+[11] VALID step=100 nll/token=6.5314 ppl=686.329 seconds=0.2 improved=True
+[12] JOB_END {"type": "completed", "step": 100, "completed_epochs": 0, "process_seconds": 4.15367420995608, "best_valid_nll_per_token": 6.531356789673143, "last_valid_nll_per_token": 6.531356789673143, "examples_seen_total": 6080, "target_tokens_seen_total": 105124}

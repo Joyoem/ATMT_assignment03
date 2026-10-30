@@ -1,0 +1,64 @@
+Original: slurm-atmt-constant-e7-123.out; total lines: 334; excerpt lines: 63
+[1] RUN method=constant cuda=True max_epochs=7 stop_after_epoch=7 max_steps=0 warmup=1000 run_dir=/home/zhaoyan/projects/atmt_a3/runs/full7_constant_s42
+[2] DATA loaded train=2000000 valid=10000 seconds=4.4
+[3] MODEL params=11831872 initial_sha256=0af33cc7536255b1df25bdf61b7fd1656288c5d983e89e6ffae4b9817bf841ab
+[4] RESUMING at global_step=194435, epoch=6, epoch_step=0
+[5] STEP=194500/0 method=constant lr=0.0003 nll/token=1.0013 sec/step_recent=0.037 tokens/sec_recent=28918
+[6] STEP=194600/0 method=constant lr=0.0003 nll/token=2.5762 sec/step_recent=0.030 tokens/sec_recent=35476
+[7] STEP=194700/0 method=constant lr=0.0003 nll/token=1.1700 sec/step_recent=0.030 tokens/sec_recent=34295
+[8] STEP=194800/0 method=constant lr=0.0003 nll/token=0.5208 sec/step_recent=0.030 tokens/sec_recent=35811
+[9] STEP=194900/0 method=constant lr=0.0003 nll/token=2.6201 sec/step_recent=0.030 tokens/sec_recent=36275
+[10] STEP=195000/0 method=constant lr=0.0003 nll/token=2.3612 sec/step_recent=0.030 tokens/sec_recent=35521
+[11] STEP=195100/0 method=constant lr=0.0003 nll/token=2.1677 sec/step_recent=0.030 tokens/sec_recent=35671
+[12] STEP=195200/0 method=constant lr=0.0003 nll/token=2.3303 sec/step_recent=0.030 tokens/sec_recent=35323
+[13] STEP=195300/0 method=constant lr=0.0003 nll/token=2.6382 sec/step_recent=0.030 tokens/sec_recent=35980
+[14] STEP=195400/0 method=constant lr=0.0003 nll/token=3.1333 sec/step_recent=0.031 tokens/sec_recent=36998
+[15] STEP=195500/0 method=constant lr=0.0003 nll/token=1.6813 sec/step_recent=0.030 tokens/sec_recent=32653
+[61] VALID step=200000 nll/token=2.1321 ppl=8.432 seconds=0.4 improved=False
+[162] VALID step=210000 nll/token=2.0829 ppl=8.027 seconds=0.4 improved=True
+[263] VALID step=220000 nll/token=2.0731 ppl=7.950 seconds=0.4 improved=True
+[290] STEP=222700/0 method=constant lr=0.0003 nll/token=1.0442 sec/step_recent=0.030 tokens/sec_recent=34664
+[291] STEP=222800/0 method=constant lr=0.0003 nll/token=2.6980 sec/step_recent=0.031 tokens/sec_recent=36240
+[292] STEP=222900/0 method=constant lr=0.0003 nll/token=0.4512 sec/step_recent=0.030 tokens/sec_recent=34613
+[293] STEP=223000/0 method=constant lr=0.0003 nll/token=0.9928 sec/step_recent=0.030 tokens/sec_recent=35635
+[294] STEP=223100/0 method=constant lr=0.0003 nll/token=2.6049 sec/step_recent=0.029 tokens/sec_recent=33793
+[295] STEP=223200/0 method=constant lr=0.0003 nll/token=0.9092 sec/step_recent=0.031 tokens/sec_recent=36769
+[296] STEP=223300/0 method=constant lr=0.0003 nll/token=2.4671 sec/step_recent=0.031 tokens/sec_recent=36451
+[297] STEP=223400/0 method=constant lr=0.0003 nll/token=2.4825 sec/step_recent=0.031 tokens/sec_recent=35708
+[298] STEP=223500/0 method=constant lr=0.0003 nll/token=2.0136 sec/step_recent=0.030 tokens/sec_recent=35625
+[299] STEP=223600/0 method=constant lr=0.0003 nll/token=2.3338 sec/step_recent=0.030 tokens/sec_recent=33262
+[300] STEP=223700/0 method=constant lr=0.0003 nll/token=1.7689 sec/step_recent=0.031 tokens/sec_recent=36681
+[301] STEP=223800/0 method=constant lr=0.0003 nll/token=2.3137 sec/step_recent=0.030 tokens/sec_recent=35851
+[302] STEP=223900/0 method=constant lr=0.0003 nll/token=2.0043 sec/step_recent=0.031 tokens/sec_recent=37362
+[303] STEP=224000/0 method=constant lr=0.0003 nll/token=2.7432 sec/step_recent=0.030 tokens/sec_recent=34616
+[304] STEP=224100/0 method=constant lr=0.0003 nll/token=1.9735 sec/step_recent=0.030 tokens/sec_recent=35561
+[305] STEP=224200/0 method=constant lr=0.0003 nll/token=2.5087 sec/step_recent=0.029 tokens/sec_recent=34716
+[306] STEP=224300/0 method=constant lr=0.0003 nll/token=1.9375 sec/step_recent=0.031 tokens/sec_recent=37210
+[307] STEP=224400/0 method=constant lr=0.0003 nll/token=1.9406 sec/step_recent=0.030 tokens/sec_recent=34230
+[308] STEP=224500/0 method=constant lr=0.0003 nll/token=2.4391 sec/step_recent=0.031 tokens/sec_recent=35773
+[309] STEP=224600/0 method=constant lr=0.0003 nll/token=0.6967 sec/step_recent=0.031 tokens/sec_recent=35453
+[310] STEP=224700/0 method=constant lr=0.0003 nll/token=2.1173 sec/step_recent=0.030 tokens/sec_recent=34349
+[311] STEP=224800/0 method=constant lr=0.0003 nll/token=2.0074 sec/step_recent=0.030 tokens/sec_recent=35494
+[312] STEP=224900/0 method=constant lr=0.0003 nll/token=1.3457 sec/step_recent=0.031 tokens/sec_recent=36036
+[313] STEP=225000/0 method=constant lr=0.0003 nll/token=2.2992 sec/step_recent=0.031 tokens/sec_recent=36018
+[314] STEP=225100/0 method=constant lr=0.0003 nll/token=2.7104 sec/step_recent=0.030 tokens/sec_recent=34606
+[315] STEP=225200/0 method=constant lr=0.0003 nll/token=2.4153 sec/step_recent=0.030 tokens/sec_recent=35291
+[316] STEP=225300/0 method=constant lr=0.0003 nll/token=2.1459 sec/step_recent=0.031 tokens/sec_recent=35607
+[317] STEP=225400/0 method=constant lr=0.0003 nll/token=1.2294 sec/step_recent=0.030 tokens/sec_recent=33898
+[318] STEP=225500/0 method=constant lr=0.0003 nll/token=2.3608 sec/step_recent=0.030 tokens/sec_recent=36547
+[319] STEP=225600/0 method=constant lr=0.0003 nll/token=1.9732 sec/step_recent=0.031 tokens/sec_recent=37162
+[320] STEP=225700/0 method=constant lr=0.0003 nll/token=2.4055 sec/step_recent=0.029 tokens/sec_recent=36007
+[321] STEP=225800/0 method=constant lr=0.0003 nll/token=1.7726 sec/step_recent=0.030 tokens/sec_recent=36374
+[322] STEP=225900/0 method=constant lr=0.0003 nll/token=2.2595 sec/step_recent=0.030 tokens/sec_recent=34420
+[323] STEP=226000/0 method=constant lr=0.0003 nll/token=1.5358 sec/step_recent=0.030 tokens/sec_recent=35157
+[324] STEP=226100/0 method=constant lr=0.0003 nll/token=2.1845 sec/step_recent=0.030 tokens/sec_recent=35775
+[325] STEP=226200/0 method=constant lr=0.0003 nll/token=1.0434 sec/step_recent=0.030 tokens/sec_recent=33667
+[326] STEP=226300/0 method=constant lr=0.0003 nll/token=2.9853 sec/step_recent=0.031 tokens/sec_recent=36341
+[327] STEP=226400/0 method=constant lr=0.0003 nll/token=1.7222 sec/step_recent=0.031 tokens/sec_recent=35067
+[328] STEP=226500/0 method=constant lr=0.0003 nll/token=0.8789 sec/step_recent=0.030 tokens/sec_recent=36783
+[329] STEP=226600/0 method=constant lr=0.0003 nll/token=2.4181 sec/step_recent=0.030 tokens/sec_recent=33471
+[330] STEP=226700/0 method=constant lr=0.0003 nll/token=2.3746 sec/step_recent=0.031 tokens/sec_recent=37935
+[331] STEP=226800/0 method=constant lr=0.0003 nll/token=2.4982 sec/step_recent=0.030 tokens/sec_recent=35016
+[332] EPOCH VALID epoch=6 step=226854 nll/token=2.0467 ppl=7.742
+[333] END epoch=6 completed_epochs=7 global_step=226854 examples_seen_total=14000000
+[334] JOB_END {"type": "completed", "step": 226854, "completed_epochs": 7, "process_seconds": 1080.2584786539664, "best_valid_nll_per_token": 2.046711633243071, "last_valid_nll_per_token": 2.046711633243071, "examples_seen_total": 14000000, "target_tokens_seen_total": 243911101}

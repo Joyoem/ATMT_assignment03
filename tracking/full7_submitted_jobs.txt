@@ -1,0 +1,48 @@
+constant smoke: 116
+constant epoch 1/7: 117 (afterok:116)
+constant epoch 2/7: 118 (afterok:117)
+constant epoch 3/7: 119 (afterok:118)
+constant epoch 4/7: 120 (afterok:119)
+constant epoch 5/7: 121 (afterok:120)
+constant epoch 6/7: 122 (afterok:121)
+constant epoch 7/7: 123 (afterok:122)
+linear smoke: 124
+linear epoch 1/7: 125 (afterok:124)
+linear epoch 2/7: 126 (afterok:125)
+linear epoch 3/7: 127 (afterok:126)
+linear epoch 4/7: 128 (afterok:127)
+linear epoch 5/7: 129 (afterok:128)
+linear epoch 6/7: 130 (afterok:129)
+linear epoch 7/7: 131 (afterok:130)
+Linear smoke retry: 132
+Linear epoch 1 retry: 133
+Linear epoch 2 retry: 134
+Linear epoch 3 retry: 135
+Linear epoch 4 retry: 136
+Linear epoch 5 retry: 137
+Linear epoch 6 retry: 138
+Linear epoch 7 retry: 139
+Linear smoke retry: 140
+Linear epoch 1 retry: 141
+Linear epoch 2 retry: 142
+Linear epoch 3 retry: 143
+Linear epoch 4 retry: 144
+Linear epoch 5 retry: 145
+Linear epoch 6 retry: 146
+Linear epoch 7 retry: 147
+Linear smoke retry: 148
+Linear epoch 1 retry: 149
+Linear epoch 2 retry: 150
+Linear epoch 3 retry: 151
+Linear epoch 4 retry: 152
+Linear epoch 5 retry: 153
+Linear epoch 6 retry: 154
+Linear epoch 7 retry: 155
+Linear smoke retry: 156
+Linear epoch 1 retry: 157
+Linear epoch 2 retry: 158
+Linear epoch 3 retry: 159
+Linear epoch 4 retry: 160
+Linear epoch 5 retry: 161
+Linear epoch 6 retry: 162
+Linear epoch 7 retry: 163
