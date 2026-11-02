@@ -1,43 +1,46 @@
-# ATMT Assignment 3 — Experiment protocol (2026-10-29)
+# ATMT Assignment 3 — Experimental protocol
 
-## Research question
-Does the *shape* of the LR warmup influence early convergence and translation quality in a Czech-English Transformer NMT system?
+This file describes the experiments that were **actually completed**. It replaces an earlier draft that mentioned beam search. We did not implement beam search.
 
-## Independent variable
-`method=constant` vs `method=linear`, keeping the final learning rate 0.0003 and initial LR factor 0.1 identical.
-- Constant: LR=0.00003 during training steps 1–1000; LR=0.0003 thereafter.
-- Linear: linearly interpolate 0.00003 at step 1 to 0.0003 at step 1000; LR=0.0003 thereafter.
+## Task 1 — Learning-rate warmup (Czech → English)
 
-Both use Adam and a fixed schedule after the warmup. These are explicit *operational definitions*, not a claim that every paper defines "constant warmup" this way.
+**Question:** Does the warmup schedule affect convergence and final translation quality?
 
-## Controlled variables
-- Source and target: same 2,000,000 pre-tokenized aligned Czech/English training pairs; same SentencePiece vocabularies.
-- Model: 3-layer encoder / 3-layer decoder Transformer, 256 hidden size, 4 heads, 1024 FFN, 0.1 dropout, max length 300; freshly randomly initialized in both runs. No teacher checkpoint weights are used for Task 1.
-- Seed 42 (both initialization and sampler), Adam optimizer, lr 3e-4, clip norm 4, batch size <=64, max batch tokens 4096, 7 complete epochs.
-- Seeded *uniform* corpus permutation with local length bucketing: this is an intentional deviation from the original toolkit's global length-sort BatchSampler, which could bias an incomplete epoch toward short sequences. Both treatments use exactly the same ordering.
-- Validation: 512 evenly-spaced dev sentences with teacher forcing every 10,000 steps and at epoch end, normalized negative log likelihood per non-pad token and perplexity.
-- All parameter changes vs toolkit are logged in `config.json`, along with toolkit git commit and GPU / library versions.
+- Models: two Transformers trained **from scratch**, with the same initial weights (seed 42), training order, tokenizers, Adam optimizer, and 7-epoch budget.
+- Training data: 2,000,000 aligned Czech–English sentence pairs; all pairs processed once per epoch.
+- Model: 3 encoder and 3 decoder layers, hidden size 256, 4 attention heads, FFN size 1024, dropout 0.1.
+- Learning rate after warmup: 0.0003; warmup length: 1,000 steps.
+- **Constant:** learning rate 0.00003 for steps 1–1000; then 0.0003.
+- **Linear:** increase from 0.00003 at step 1 to 0.0003 at step 1000; then 0.0003.
+- Other settings: batch size up to 64; at most 4,096 tokens per batch; gradient clipping 4; max sequence length 300; 7 full epochs (226,854 optimizer steps).
+- Validation: same fixed 512-sentence subset, teacher-forced NLL and perplexity. Test: same 10,000 sentences, greedy decoding, max length 100, BLEU and chrF.
+- Original course checkpoint evaluated on the same test set as a **reference**, not a fully matched training control.
 
-## Full-epoch protocol
-Each of the seven epochs processes the entire 2,000,000-pair training split once. Actual optimizer steps vary with maximum-token bucketing and are logged; per-run sample appearances should total 14,000,000. This is a more comparable dataset-pass budget than the 12,000-step pilot, but the batching/sampling and seed still differ from the teacher baseline.
+**Results:** Constant final validation NLL 2.0467, test BLEU 22.5844, chrF 44.8521. Linear final validation NLL 2.0722, test BLEU 21.7178, chrF 43.6010. Linear was slightly better early, but constant was better at the end. Training time was about 7,414 and 7,435 seconds, respectively (sum of seven epoch records).
 
-## Outputs per run
-- `config.json`: exact effective hyperparameters, toolkit commit, environment and tokenizer SHA256.
-- `validation_indices.json`: subset IDs.
-- `train_steps.csv`: global step, LR, token-normalized train NLL, original-toolkit-scaled train loss, grad norm, batch sizes, tokens, timing and peak allocated VRAM (sampled at log events).
-- `events.jsonl`: dev NLL / perplexity and evaluation timing on every checkpoint step.
-- `checkpoint_last.pt` and `checkpoint_best.pt`: actual model and optimizer weights for reproducibility; periodic last save overwrites to bound disk usage.
-- `summary.json`: runtime and best dev loss.
-- `results/*.metrics.json`, `*.translations.txt`, `*.references.txt`: fixed-subset greedy validation and later full test translations.
+**Limit:** One random seed per schedule. The schedules also differ in cumulative learning rate during warmup. We cannot claim statistical significance or a proven causal mechanism beyond the controlled schedule comparison.
 
-## Hypotheses and interpretation
-- H1: a gradual ramp may reduce training instability compared with a sharp jump at warmup end; inspect train loss, grad norm, valid loss, and LR around step 1000.
-- H2: lower dev loss need not imply better BLEU. Compute validation BLEU after training and full test BLEU only for selected final checkpoints.
-- Two single-seed runs support exploratory conclusions only, not statistical significance. If time allows, repeat with seed 123.
-- Other explanation: constant strategy accumulates less LR during warmup, so cumulative step size differs; discuss as a confound inherent to the chosen comparison.
+## Task 2 — LoRA adaptation (Slovak → English)
 
-## Task 2 (separate work)
-Current `seq2seq/decode.py` is greedy (`argmax`). The `seq2seq/beam.py` provided by the 2025 toolkit is based on RNN/LSTM state and is NOT integrated into the Transformer decoder. Implement beam search separately and compare using the exact same teacher checkpoint and validation/test samples. Do not claim `beam_size=5` from the 2026 teacher's log proves beam search was used.
+**Question:** Can a small set of LoRA parameters improve Slovak-to-English translation from the Czech-to-English baseline?
 
-## GitHub / submission
-Keep data archives, `.pt` weights, virtualenvs and SLURM huge logs out of GitHub. Include original code attribution, modifications, scripts, experimental configs, figures, and the assignment-required test set translation files. Commit all before November 3 23:59 Europe/Zurich.
+- Original course Czech–English checkpoint is the teacher; it is kept frozen during LoRA training.
+- Reuse the original Czech source and English target SentencePiece tokenizers. No new tokenizer is trained.
+- Data: official OPUS-100 `en-sk` splits. Shuffle the training split with seed 42 and take 200,000 pairs; use 2,000 dev and 2,000 test pairs.
+- Insert rank-8, alpha-16 LoRA updates into query/value projections in nine attention modules (18 adapted linear layers).
+- Train 73,728 of 11,905,600 parameters (0.619%). AdamW, learning rate 0.0003, batch size 64, five epochs.
+- Evaluate the unmodified teacher (zero-shot) and adapted model on the same 2,000 test sentences, with greedy decoding and max generation length 95.
+
+**Results:** Zero-shot BLEU 8.0632 and chrF 29.4903. LoRA BLEU 14.2926 and chrF 34.4390. Training and validation took about 836.7 seconds in total.
+
+**Limit:** The OPUS dev/test sets have 10 identical sentence pairs. Some adapted translations still lose names or change meaning. The inference time difference should not be treated as a model-speed gain because output lengths differ.
+
+## Files and audit
+
+- Code: `scripts/`, `jobs/`, `submit_full7.sh`, `submit_lora.sh`.
+- Training and validation: `runs/`.
+- Test results and translations: `results/` (Task 1), `runs/lora_sk_en_r8_a16/` (Task 2).
+- Final scores and verification: `tracking/audit_v2/`.
+- Data and runtime records: `evidence/`.
+
+The final audit reports **47 OK, 2 WARN, 0 FAIL**. The two warnings are the OPUS dev/test overlap and the uncommitted local course-toolkit changes. We did not run extra seeds, beam search, or full fine-tuning because these were not required for the selected subtasks.
