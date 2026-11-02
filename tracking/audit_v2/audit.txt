@@ -7,19 +7,20 @@ Only reads original run files; writes to tracking/audit_v2. Absence of Slurm que
 ==== TASK 1: LEARNING RATE WARMUP ====
 [OK] constant: 7 epoch-completion records + final completed summary
 [OK] constant: total examples seen=14,000,000 (expected 14,000,000 for seven full 2M-pair epochs)
-[FAIL] constant: full 10,000-sentence test incomplete/inconsistent (metric n=None, hypotheses=None, refs=None)
-constant: epochs=[1, 2, 3, 4, 5, 6, 7]; final step=226854; train seconds (sum of job-level epoch records)=7414.3; best dev NLL=2.046711633243071; test BLEU=None; chrF=None; inference seconds=None
+[OK] constant: matched full 10,000-sentence test metrics, hypotheses and references
+constant: epochs=[1, 2, 3, 4, 5, 6, 7]; final step=226854; train seconds (sum of job-level epoch records)=7414.3; best dev NLL=2.046711633243071; test BLEU=22.584364886274727; chrF=44.85212259832814; inference seconds=652.5490701739909
 [OK] linear: 7 epoch-completion records + final completed summary
 [OK] linear: total examples seen=14,000,000 (expected 14,000,000 for seven full 2M-pair epochs)
-[FAIL] linear: full 10,000-sentence test incomplete/inconsistent (metric n=None, hypotheses=None, refs=None)
-linear: epochs=[1, 2, 3, 4, 5, 6, 7]; final step=226854; train seconds (sum of job-level epoch records)=7435.2; best dev NLL=2.0722428597786045; test BLEU=None; chrF=None; inference seconds=None
+[OK] linear: matched full 10,000-sentence test metrics, hypotheses and references
+linear: epochs=[1, 2, 3, 4, 5, 6, 7]; final step=226854; train seconds (sum of job-level epoch records)=7435.2; best dev NLL=2.0722428597786045; test BLEU=21.717757343429458; chrF=43.60097127457687; inference seconds=626.1908006060403
 [OK] Task 1 identical initial model weight hash
 [OK] Task 1 same validation sentence indices
 Learning rate @ step 1: constant=3e-05 linear=3e-05
 Learning rate @ step 100: constant=3e-05 linear=5.67567568e-05
 Learning rate @ step 500: constant=3e-05 linear=0.000164864865
 Learning rate @ step 1000: constant=3e-05 linear=0.0003
-[WARN] No matched teacher Czech→English baseline evaluation (results/teacher_test_full.metrics.json). Original teacher translations use different max length / runtime; do not claim strictly matched BLEU/time.
+Full test BLEU linear - constant: -0.867
+[OK] Teacher baseline has a separately evaluated full-test metric file (review decoding settings before comparing)
 
 ==== TASK 2: SLOVAK→ENGLISH LoRA ====
 [OK] LoRA 5 epochs completed: True; epoch records=[1, 2, 3, 4, 5]
@@ -50,6 +51,9 @@ LoRA inference time delta (adapted - zero-shot): -60.75 seconds
 LoRA BLEU delta (adapted - zero-shot): +6.229
 
 ==== INDEPENDENT BLEU / chrF RECOMPUTATION ====
+[OK] constant score recompute: BLEU=22.584, chrF=44.852; saved BLEU=22.584364886274727, chrF=44.85212259832814
+[OK] linear score recompute: BLEU=21.718, chrF=43.601; saved BLEU=21.717757343429458, chrF=43.60097127457687
+[OK] Task 1 full-test references identical and in same order
 [OK] zero_shot recomputed: BLEU=8.063, chrF=29.490 (saved 8.063173875850518, 29.49025444811879)
 [OK] lora recomputed: BLEU=14.293, chrF=34.439 (saved 14.292627564156621, 34.43897412517981)
 LoRA ΔBLEU=+6.229; ΔchrF=+4.949
@@ -74,5 +78,5 @@ Toolkit commit: 078dab38e72a4690ec841042ed0762199263ff05
 [MANUAL] GitHub must contain tested scripts AND improved-model test translations; omit .pt, raw OPUS archives, .venv, private credentials, oversized logs
 [MANUAL] Only one seed for each method: comparisons are exploratory; do not claim statistical significance without repeat seeds
 
-COUNTS: {'OK': 41, 'WARN': 3, 'FAIL': 2, 'MANUAL': 5}
+COUNTS: {'OK': 47, 'WARN': 2, 'FAIL': 0, 'MANUAL': 5}
 Interpretation: FAIL=missing/inconsistent evidence, WARN=missing secondary evidence or caveat, MANUAL=human action required.

@@ -45,12 +45,24 @@ def main():
     indices=range(len(ds)) if args.limit==0 else np.linspace(0,len(ds)-1,min(args.limit,len(ds)),dtype=int).tolist()
     prefix=Path(args.output_prefix)
     prefix.parent.mkdir(parents=True,exist_ok=True)
+    src_max_len = int(model.encoder.pos_embed.size(1))
+    truncated_src = 0
+    max_original_src_len = 0
     hyps=[];refs=[];records=[]
     t0=time.perf_counter()
     with torch.inference_mode():
         for i,index in enumerate(indices):
             sample=ds[index]
-            src_ids=sample['source'].unsqueeze(0).to(device)
+            source_tokens = sample['source']
+            original_len = int(source_tokens.numel())
+            max_original_src_len = max(max_original_src_len, original_len)
+
+            if original_len > src_max_len:
+                source_tokens = source_tokens[:src_max_len].clone()
+                source_tokens[-1] = src.eos_id()
+                truncated_src += 1
+
+            src_ids = source_tokens.unsqueeze(0).to(device)
             src_pad_mask=(src_ids==src.pad_id()).view(1,1,1,-1)
             predictions=decode(model,src_ids,src_pad_mask,maxlen,tgt,arch_args,device)
             ids=predictions[0]
@@ -70,6 +82,10 @@ def main():
     (prefix.with_suffix('.references.txt')).write_text('\n'.join(refs)+'\n',encoding='utf-8')
     result={'checkpoint':str(Path(args.checkpoint).resolve()),'split':args.split,'limit':args.limit,
             'num_sentences':len(hyps),'max_len':maxlen,'decoding':'toolkit_greedy',
+            'source_max_len':src_max_len,
+            'source_truncated_sentences':truncated_src,
+            'max_original_source_len':max_original_src_len,
+            'source_truncation':'keep first max_len-1 source tokens and append EOS',
             'bleu':bleu.score,'chrf':chrf.score,'seconds':elapsed,'sentences_per_second':len(hyps)/max(elapsed,1e-6),
             'bleu_signature':str(bleu.get_signature()) if hasattr(bleu,'get_signature') else None,
             'sample_records':records}

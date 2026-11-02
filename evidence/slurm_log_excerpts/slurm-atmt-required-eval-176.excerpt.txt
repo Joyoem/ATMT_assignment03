@@ -1,0 +1,61 @@
+Original: slurm-atmt-required-eval-176.out; total lines: 313; excerpt lines: 60
+[1] EVALUATING: data/extracted/cz-en/checkpoints/checkpoint_best.pt
+[2] /home/zhaoyan/miniforge3/lib/python3.14/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+[3]   warn_once(FP_FUSION_DEFAULT_WARNING)
+[4] GEN 100/10000
+[5] GEN 200/10000
+[6] GEN 300/10000
+[7] GEN 400/10000
+[8] GEN 500/10000
+[9] GEN 600/10000
+[10] GEN 700/10000
+[11] GEN 800/10000
+[12] GEN 900/10000
+[13] GEN 1000/10000
+[14] GEN 1100/10000
+[15] GEN 1200/10000
+[269] GEN 5800/10000
+[270] GEN 5900/10000
+[271] GEN 6000/10000
+[272] GEN 6100/10000
+[273] GEN 6200/10000
+[274] GEN 6300/10000
+[275] GEN 6400/10000
+[276] GEN 6500/10000
+[277] GEN 6600/10000
+[278] GEN 6700/10000
+[279] GEN 6800/10000
+[280] GEN 6900/10000
+[281] GEN 7000/10000
+[282] GEN 7100/10000
+[283] GEN 7200/10000
+[284] GEN 7300/10000
+[285] GEN 7400/10000
+[286] GEN 7500/10000
+[287] GEN 7600/10000
+[288] GEN 7700/10000
+[289] GEN 7800/10000
+[290] GEN 7900/10000
+[291] GEN 8000/10000
+[292] GEN 8100/10000
+[293] GEN 8200/10000
+[294] GEN 8300/10000
+[295] GEN 8400/10000
+[296] GEN 8500/10000
+[297] GEN 8600/10000
+[298] GEN 8700/10000
+[299] GEN 8800/10000
+[300] GEN 8900/10000
+[301] GEN 9000/10000
+[302] GEN 9100/10000
+[303] GEN 9200/10000
+[304] GEN 9300/10000
+[305] GEN 9400/10000
+[306] GEN 9500/10000
+[307] GEN 9600/10000
+[308] GEN 9700/10000
+[309] GEN 9800/10000
+[310] GEN 9900/10000
+[311] GEN 10000/10000
+[312] RESULT {"checkpoint": "/home/zhaoyan/projects/atmt_a3/runs/full7_linear_s42/checkpoint_best.pt", "split": "test", "limit": 0, "num_sentences": 10000, "max_len": 100, "decoding": "toolkit_greedy", "source_max_len": 300, "source_truncated_sentences": 1, "max_original_source_len": 338, "source_truncation": "keep first max_len-1 source tokens and append EOS", "bleu": 21.717757343429458, "chrf": 43.60097127457687, "seconds": 626.1908006060403, "sentences_per_second": 15.969573475563351, "bleu_signature": null}
+[313] ALL_REQUIRED_EVALUATIONS_COMPLETE

@@ -1,0 +1,269 @@
+{
+  "checkpoint": "/home/zhaoyan/projects/atmt_a3/runs/full7_constant_s42/checkpoint_best.pt",
+  "split": "test",
+  "limit": 0,
+  "num_sentences": 10000,
+  "max_len": 100,
+  "decoding": "toolkit_greedy",
+  "source_max_len": 300,
+  "source_truncated_sentences": 1,
+  "max_original_source_len": 338,
+  "source_truncation": "keep first max_len-1 source tokens and append EOS",
+  "bleu": 22.584364886274727,
+  "chrf": 44.85212259832814,
+  "seconds": 652.5490701739909,
+  "sentences_per_second": 15.32451804326941,
+  "bleu_signature": null,
+  "sample_records": [
+    {
+      "index": 0,
+      "hypothesis": ", you, Dr. Kwangtung's holding a rough kid?",
+      "reference": "A tough kid from Kwangtung?"
+    },
+    {
+      "index": 1,
+      "hypothesis": ", whose pre-cooks had been in the basket in Sierras and waited for a downturn?",
+      "reference": "A kid whose ancestors used to hang in baskets in the Sierras, poking dynamite sticks in cliff faces?"
+    },
+    {
+      "index": 2,
+      "hypothesis": ", I want you to turn into my breath.",
+      "reference": "All I'm asking you to do is be a fly on the wall."
+    },
+    {
+      "index": 3,
+      "hypothesis": ", your preference is turning into the grave.",
+      "reference": "Your ancestors are rolling in their graves."
+    },
+    {
+      "index": 4,
+      "hypothesis": "pressure on me.",
+      "reference": "You're pushing too much."
+    },
+    {
+      "index": 5,
+      "hypothesis": ", I'm not a slave.",
+      "reference": "I'm no slave."
+    },
+    {
+      "index": 6,
+      "hypothesis": ", I'm done as security.",
+      "reference": "I gave up my security job."
+    },
+    {
+      "index": 7,
+      "hypothesis": ", I'm done with the chauffeur.",
+      "reference": "I gave up my chauffeur job."
+    },
+    {
+      "index": 8,
+      "hypothesis": ", I'm sending the money.",
+      "reference": "I send less money home."
+    },
+    {
+      "index": 9,
+      "hypothesis": ", I have no eat.",
+      "reference": "I don't eat right."
+    },
+    {
+      "index": 10,
+      "hypothesis": ", I'm sick.",
+      "reference": "I'm getting sick."
+    },
+    {
+      "index": 11,
+      "hypothesis": ", if I die, I'm fucked up.",
+      "reference": "I die, I'm fucked!"
+    },
+    {
+      "index": 12,
+      "hypothesis": ", my family will be fucked up.",
+      "reference": "My family's fucked!"
+    },
+    {
+      "index": 13,
+      "hypothesis": "?",
+      "reference": "For what?"
+    },
+    {
+      "index": 14,
+      "hypothesis": "what do you mean?",
+      "reference": "What do you mean?"
+    },
+    {
+      "index": 15,
+      "hypothesis": ", however, no alternatives were not allowed to exist.",
+      "reference": "However, no alternatives were provided by any interested party."
+    },
+    {
+      "index": 16,
+      "hypothesis": ", the revision is based on the data on capacity of the applicant and which covers the entire Union industry.",
+      "reference": "The revision is based on the revised capacity data provided by the complainant, covering the entire Union industry."
+    },
+    {
+      "index": 17,
+      "hypothesis": ", the revised data are available on publicly available data, in particular, not to exploit capacity and capacity of producers who have stopped due to financial difficulties.",
+      "reference": "The revised data was cross-referenced to publicly available data concerning in particular idle capacity as well as capacity of producers that ceased operations due to financial difficulties."
+    },
+    {
+      "index": 18,
+      "hypothesis": ", as explained above in Section 6 ‘Marroeconomic indicators’, the revised data provided more precisely precise data on the capacity of the capacity available for biophobia production in the period considered before the initially disclosure and published in the provisional Regulation.",
+      "reference": "As explained above in section 6, ‘Macroeconomic indicators’, the revised data provide a more accurate dataset of capacity available to produce biodiesel during the period under consideration than the dataset originally provided and published in the provisional Regulation."
+    },
+    {
+      "index": 19,
+      "hypothesis": ", everyone's mistakes.",
+      "reference": "People make mistakes"
+    },
+    {
+      "index": 20,
+      "hypothesis": ", you know what that is?",
+      "reference": "Atonement, do you know what that means?"
+    },
+    {
+      "index": 21,
+      "hypothesis": ", you're very hard for sin.",
+      "reference": "Big atonement for big sins..."
+    },
+    {
+      "index": 22,
+      "hypothesis": ", you can get some sin in the light.",
+      "reference": "Small atonement for small sins"
+    },
+    {
+      "index": 23,
+      "hypothesis": "?",
+      "reference": "OK?"
+    },
+    {
+      "index": 24,
+      "hypothesis": ", the man killed a guy and I helped him.",
+      "reference": "I helped him"
+    },
+    {
+      "index": 25,
+      "hypothesis": ", I was happy.",
+      "reference": "I was happy..."
+    },
+    {
+      "index": 26,
+      "hypothesis": "forgive me.",
+      "reference": "I'm truly sorry"
+    },
+    {
+      "index": 27,
+      "hypothesis": "you have to go to work!",
+      "reference": "Get up, teacher!"
+    },
+    {
+      "index": 28,
+      "hypothesis": ", Geum-jao, what are those shadowing shadows?",
+      "reference": "Geum-ja, what's with that eye shadow?"
+    },
+    {
+      "index": 29,
+      "hypothesis": ", you know why the kids...",
+      "reference": "Do you know why those kids..."
+    },
+    {
+      "index": 30,
+      "hypothesis": "!",
+      "reference": "Hey!"
+    },
+    {
+      "index": 31,
+      "hypothesis": ", there's another one!",
+      "reference": "Here's another one!"
+    },
+    {
+      "index": 32,
+      "hypothesis": "?",
+      "reference": "Hello?"
+    },
+    {
+      "index": 33,
+      "hypothesis": ", the Commission Communication from the European Parliament, the Council, the European Economic and Social Committee and the Committee of the Regions: Digital Agenda for Europe, COM(2010) 245 final, 28.8.2010.",
+      "reference": "[5] A Digital Agenda for Europe, Commission Communication to the European Parliament, the Council, the European Economic and Social Committee and the Committee of the Regions, COM(2010) 245 final, 28.8.2010. ."
+    },
+    {
+      "index": 34,
+      "hypothesis": ": Studies in Europe programme Erasmus and Leonardo da Vinci European Commission Home News Agricultural and Training and Training of natural resources in the EU Economic and Social Resources, Financial and Education, Education and Social Welfare and Social Welfare and Social Welfare, Agricultural Policy and Welfare, Protection and Social Welfare, Protection and Welfare Protection and Welfare Protection and Welfare Protection, Environment and Cons",
+      "reference": "Studying in Europe: Erasmus and Leonardo da Vinci programmes European Commission Home News Agriculture, fisheries and food Business Culture, education and youth Economy, finance and tax Employment and social rights Energy and natural resources Environment, consumers and health EU explained External relations and foreign affairs Justice and citizens' rights Regions and local development Science and technology Transport and travel You can study abroad too!"
+    },
+    {
+      "index": 35,
+      "hypothesis": ", you don't wanna see a blind, shit.",
+      "reference": "Yo, you ain't seeing the basement, bitch."
+    },
+    {
+      "index": 36,
+      "hypothesis": ", did you get it?",
+      "reference": "Is that sinking in?"
+    },
+    {
+      "index": 37,
+      "hypothesis": ", now.",
+      "reference": "Now beat it."
+    },
+    {
+      "index": 38,
+      "hypothesis": ", not for sale.",
+      "reference": "House is not for sale."
+    },
+    {
+      "index": 39,
+      "hypothesis": ", what was that?",
+      "reference": "So how was it?"
+    },
+    {
+      "index": 40,
+      "hypothesis": ", was it... experience?",
+      "reference": "Was it a... an experience?"
+    },
+    {
+      "index": 41,
+      "hypothesis": ".",
+      "reference": "Yeah."
+    },
+    {
+      "index": 42,
+      "hypothesis": ", it was definitely experience.",
+      "reference": "It was definitely an experience."
+    },
+    {
+      "index": 43,
+      "hypothesis": ", what's that smell?",
+      "reference": "What's that smell?"
+    },
+    {
+      "index": 44,
+      "hypothesis": ".",
+      "reference": "Yeah."
+    },
+    {
+      "index": 45,
+      "hypothesis": ", this is... secret Navaj flowers and...",
+      "reference": "It's... sacred Navajo herbs and..."
+    },
+    {
+      "index": 46,
+      "hypothesis": ", is everything okay?",
+      "reference": "Hey, is everything okay?"
+    },
+    {
+      "index": 47,
+      "hypothesis": ".",
+      "reference": "No."
+    },
+    {
+      "index": 48,
+      "hypothesis": "not.",
+      "reference": "Not really."
+    },
+    {
+      "index": 49,
+      "hypothesis": ", actually.",
+      "reference": "Actually, not at all."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+Original: slurm-atmt-required-eval-175.out; total lines: 49; excerpt lines: 49
+[1] EVALUATING: data/extracted/cz-en/checkpoints/checkpoint_best.pt
+[2] /home/zhaoyan/miniforge3/lib/python3.14/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+[3]   warn_once(FP_FUSION_DEFAULT_WARNING)
+[4] GEN 100/10000
+[5] GEN 200/10000
+[6] GEN 300/10000
+[7] GEN 400/10000
+[8] GEN 500/10000
+[9] GEN 600/10000
+[10] GEN 700/10000
+[11] GEN 800/10000
+[12] GEN 900/10000
+[13] GEN 1000/10000
+[14] GEN 1100/10000
+[15] GEN 1200/10000
+[16] GEN 1300/10000
+[17] GEN 1400/10000
+[18] GEN 1500/10000
+[19] GEN 1600/10000
+[20] GEN 1700/10000
+[21] GEN 1800/10000
+[22] GEN 1900/10000
+[23] GEN 2000/10000
+[24] Traceback (most recent call last):
+[25]   File "/home/zhaoyan/projects/atmt_a3/scripts/evaluate_checkpoint.py", line 80, in <module>
+[26]     main()
+[27]     ~~~~^^
+[28]   File "/home/zhaoyan/projects/atmt_a3/scripts/evaluate_checkpoint.py", line 55, in main
+[29]     predictions=decode(model,src_ids,src_pad_mask,maxlen,tgt,arch_args,device)
+[30]   File "/home/zhaoyan/projects/atmt_a3/toolkit/seq2seq/decode.py", line 22, in decode
+[31]     output = model(src_tokens, src_pad_mask, generated, trg_pad_mask).to(device)
+[32]              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[33]   File "/home/zhaoyan/miniforge3/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+[34]     return self._call_impl(*args, **kwargs)
+[35]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[36]   File "/home/zhaoyan/miniforge3/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+[37]     return forward_call(*args, **kwargs)
+[38]   File "/home/zhaoyan/projects/atmt_a3/toolkit/seq2seq/models/transformer.py", line 73, in forward
+[39]     return self.decoder(self.encoder(src, src_mask), src_mask, trg, trg_pad_mask)
+[40]                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+[41]   File "/home/zhaoyan/miniforge3/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+[42]     return self._call_impl(*args, **kwargs)
+[43]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[44]   File "/home/zhaoyan/miniforge3/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+[45]     return forward_call(*args, **kwargs)
+[46]   File "/home/zhaoyan/projects/atmt_a3/toolkit/seq2seq/models/transformer.py", line 102, in forward
+[47]     x = self.dropout(x + x_pos) # update vectors with position information
+[48]                      ~~^~~~~~~
+[49] RuntimeError: The size of tensor a (338) must match the size of tensor b (300) at non-singleton dimension 1

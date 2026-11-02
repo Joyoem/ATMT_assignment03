@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-10-30T17:25:22.897747+00:00",
+  "created_utc": "2026-11-02T16:42:37.639660+00:00",
   "source_experiment_root": "/home/zhaoyan/projects/atmt_a3",
   "source_git_repo": "YinZhengxun/atmt_2025",
   "copied_files": [
@@ -38,6 +38,42 @@
       "bytes": 878,
       "sha256": "f51b8b117b3f34dba4e916fff302ce2616c9a42d0e29ba9035468a476d6a9954",
       "cluster_relative_source": "jobs/smoke_full7.sbatch"
+    },
+    {
+      "path": "results/full7_constant_test_full.metrics.json",
+      "bytes": 8982,
+      "sha256": "91006342f8cef3ca22ea61dfbdd73c5d58ad467bdafb42d24c79463014f0e964",
+      "cluster_relative_source": "results/full7_constant_test_full.metrics.json"
+    },
+    {
+      "path": "results/full7_constant_test_full.translations.txt",
+      "bytes": 477115,
+      "sha256": "07a728f1ea680396ccabc20dca441479ca44444977b8cd002ec4b30a5c2f80c8",
+      "cluster_relative_source": "results/full7_constant_test_full.translations.txt"
+    },
+    {
+      "path": "results/full7_linear_test_full.metrics.json",
+      "bytes": 9043,
+      "sha256": "ebaa524431c13d635d95ce0d1b32a7cfaa342bfe4b67138186c0f9576b4a3e8a",
+      "cluster_relative_source": "results/full7_linear_test_full.metrics.json"
+    },
+    {
+      "path": "results/full7_linear_test_full.translations.txt",
+      "bytes": 454472,
+      "sha256": "690606a02824b1cfc64452e3c81e6cc09054163d653bca8783634e72415e594c",
+      "cluster_relative_source": "results/full7_linear_test_full.translations.txt"
+    },
+    {
+      "path": "results/teacher_test_full.metrics.json",
+      "bytes": 9567,
+      "sha256": "7c5111bc24087aa0864438545c2bc431fa49677285d160510b36c6e273b34489",
+      "cluster_relative_source": "results/teacher_test_full.metrics.json"
+    },
+    {
+      "path": "results/teacher_test_full.translations.txt",
+      "bytes": 539338,
+      "sha256": "5869a40b0ad09cb727f01ecbc0997e8dc6cea41a44c2746e05db91b49bb62aaf",
+      "cluster_relative_source": "results/teacher_test_full.translations.txt"
     },
     {
       "path": "runs/full7_constant_s42/config.json",
@@ -155,8 +191,8 @@
     },
     {
       "path": "scripts/evaluate_checkpoint.py",
-      "bytes": 3983,
-      "sha256": "dec9262b3752cf1868d7c7dd50e60cf2ea85069c9701d5745611115fff5ce043",
+      "bytes": 4702,
+      "sha256": "3e5295b853615f0925256af1c0b071807e5d0b8df4f85efe21d4934cf8a03e37",
       "cluster_relative_source": "scripts/evaluate_checkpoint.py"
     },
     {
@@ -203,20 +239,20 @@
     },
     {
       "path": "tracking/audit_v2/audit.json",
-      "bytes": 33748,
-      "sha256": "903b6c2b06ac43988c28d02ac2ca824b5c31c7add375acad7957938fe01b9c38",
+      "bytes": 67003,
+      "sha256": "fe59c516115a1ac3924f43f50d590aafb7475e5c2730d3fb2cc9fe6128751e0d",
       "cluster_relative_source": "tracking/audit_v2/audit.json"
     },
     {
       "path": "tracking/audit_v2/audit.txt",
-      "bytes": 5780,
-      "sha256": "db5c6fe94f768e5474725559fd2dbbdeff9d209e46fdbb187456054b31843003",
+      "bytes": 6032,
+      "sha256": "7f2474346f2a0f62d283537a73af0e16829246da085182dfbbd7b1a184f62bf8",
       "cluster_relative_source": "tracking/audit_v2/audit.txt"
     },
     {
       "path": "tracking/audit_v2/comparison.csv",
-      "bytes": 438,
-      "sha256": "9b17f1ea570f212146cc1d68536822a3f9fd030861d9c9dec32e43463791b9f8",
+      "bytes": 550,
+      "sha256": "6479d513fce2aea2c8a741a15b6e0c9e51f01786fe2373400c47708a83afeeb3",
       "cluster_relative_source": "tracking/audit_v2/comparison.csv"
     },
     {
@@ -269,12 +305,6 @@
     }
   ],
   "missing_expected_files": [
-    "results/full7_constant_test_full.metrics.json",
-    "results/full7_constant_test_full.translations.txt",
-    "results/full7_linear_test_full.metrics.json",
-    "results/full7_linear_test_full.translations.txt",
-    "results/teacher_test_full.metrics.json",
-    "results/teacher_test_full.translations.txt",
     "tracking/lora_cpu_preflight_after_data.log",
     "tracking/summary_full7.csv"
   ],
@@ -432,6 +462,20 @@
       "sha256": "028d299c425e1ea02cebc53eda26883772b73d9e58814e6317ef192cd2e277fe",
       "lines": 33,
       "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-lora_eval-172.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-required-eval-175.out",
+      "bytes": 2600,
+      "sha256": "1c5357b566e85c7fa6968969fd300d3adff9033f2ef8a7a8f92df4c347804559",
+      "lines": 49,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-required-eval-175.excerpt.txt"
+    },
+    {
+      "filename": "slurm-atmt-required-eval-176.out",
+      "bytes": 7442,
+      "sha256": "8e96a0efd54da5a247fc772c128f0631c24ebbdfd9a52712fbbeadfb71a6faff",
+      "lines": 313,
+      "excerpt_path": "evidence/slurm_log_excerpts/slurm-atmt-required-eval-176.excerpt.txt"
     },
     {
       "filename": "slurm-atmt-smoke-constant-116.out",
