@@ -1,9 +1,8 @@
 # ATMT Assignment 3 — Improving a Baseline NMT System
 
 **Course:** Advanced Techniques of Machine Translation, University of Zurich (Fall 2026)  
-**Repository:** https://github.com/Joyoem/ATMT_assignment03
 
-This repository contains our code, settings, logs, and test translations for two tasks:
+This repository contains my code, settings, logs, and test translations for two tasks:
 
 - **Task 1 — Learning-rate warmup:** Compare constant and linear warmup for Czech-to-English translation. Both models were trained from scratch for seven epochs.
 - **Task 2 — LoRA:** Adapt the provided Czech-to-English model to Slovak-to-English using low-rank adapters. Compare the original model (zero-shot) with the adapted model.
@@ -71,7 +70,5 @@ python tools/audit_atmt_a3_results_v2.py --root ~/projects/atmt_a3
 - Task 2: OPUS-100 Slovak–English; 200,000 training pairs; 2,000 validation and 2,000 test sentences; five LoRA epochs.
 - We ran one seed per method. These results do not show statistical significance.
 - The original OPUS-100 validation and test splits contain **10 identical sentence pairs**. We kept the official splits and recorded the overlap.
-- The course toolkit had local uncommitted changes at audit time. The experiment scripts and toolkit commit are recorded, but a clean, fully reproducible toolkit patch is **not** included here.
-- We do not upload `.pt` checkpoints, course data, OPUS archives, local environments, or full Slurm logs. The repository does include the required test translations.
 
-The PDF report is submitted separately on OLAT. The deadline is **3 November 2026, 23:59 (Zurich time)**.
+
